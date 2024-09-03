@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #eaeaea;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero .subtitle {
+    font-size: 24px;
+    color: #666;
+}
+
+.hero .buttons {
+    margin-top: 20px;
+}
+
+.hero .buttons .btn-light,
+.hero .buttons .btn-dark {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero .buttons .btn-light {
+    background-color: #f0f0f0;
+}
+
+.hero .buttons .btn-dark {
+    background-color: black;
+    color: white;
+}
+
+.quotes {
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.quotes h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.quotes .subheading {
+    text-align: center;
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.quote-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quote-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quote-card blockquote {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.quote-card .quote-title {
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.quote-card .quote-description {
+    color: #777;
+}
+
+footer {
+    background-color: white;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-links .column {
+    margin: 0 20px;
+}
+
+.footer-links .column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links .column ul li {
+    margin: 5px 0;
+    color: #555;
+}
