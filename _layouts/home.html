@@ -1,42 +1,37 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/home.css">
 
 <main>
-    <section class="hero">
-        <h1>Title</h1>
-        <p class="subtitle">Subtitle</p>
-        <div class="buttons">
-            <button class="btn-light">Button</button>
-            <button class="btn-dark">Button</button>
+    <section class="portfolio">
+        <h1>Portfolio</h1>
+        <p class="subheading">개발 프로젝트들 입니다.</p>
+        <div class="portfolio-cards">
+            {% assign portfolio_posts = site.posts | where: "categories", "portfolio" | limit: 4 %}
+            {% for post in portfolio_posts %}
+                <div class="portfolio-card" {% if post.thumbnail %}style="background-image: url('{{ post.thumbnail }}');"{% endif %}>
+                    <p class="portfolio-title">{{ post.title }}</p>
+                    <p class="portfolio-description">{{ post.description }}</p>
+                    <a href="{{ post.url | relative_url }}">Read More</a>
+                </div>
+            {% endfor %}
         </div>
     </section>
+    
+    
 
-    <section class="quotes">
-        <h2>Heading</h2>
-        <p class="subheading">Subheading</p>
-        <div class="quote-cards">
-            <div class="quote-card">
-                <blockquote>“Quote”</blockquote>
-                <p class="quote-title">Title</p>
-                <p class="quote-description">Description</p>
-            </div>
-            <div class="quote-card">
-                <blockquote>“Quote”</blockquote>
-                <p class="quote-title">Title</p>
-                <p class="quote-description">Description</p>
-            </div>
-            <div class="quote-card">
-                <blockquote>“Quote”</blockquote>
-                <p class="quote-title">Title</p>
-                <p class="quote-description">Description</p>
-            </div>
-            <div class="quote-card">
-                <blockquote>“Quote”</blockquote>
-                <p class="quote-title">Title</p>
-                <p class="quote-description">Description</p>
-            </div>
-        </div>
+    <section class="posts">
+        <h2>Latest Posts</h2>
+        <ul class="post-list">
+            {% for post in site.posts limit:10 %}
+                <li class="post-item">
+                    <a href="{{ post.url | relative_url }}">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 </main>

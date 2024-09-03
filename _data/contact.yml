@@ -1,0 +1,12 @@
+- type: github
+  icon: "fab fa-github"
+  link: "https://github.com/1suyb"
+
+- type: instagram
+  icon: "fa-brands fa-x-twitter"
+  link: "https://www.instagram.com/_su._yeon_/"
+
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true # open link in current tab
+  link: "suyb1234@gmail.com"

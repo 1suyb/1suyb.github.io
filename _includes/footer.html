@@ -1,48 +1,22 @@
+<link rel="stylesheet" href="/assets/css/footer.css">
 
-<link rel="stylesheet" href="/assets/css/style.css">
-
-<footer>
+<footer class="site-footer">
   <div class="footer-content">
-      <div class="footer-logo">
-          <p>Logo</p>
-      </div>
-      <div class="footer-links">
-          <div class="column">
-              <h3>Use cases</h3>
-              <ul>
-                  <li>UI design</li>
-                  <li>UX design</li>
-                  <li>Wireframing</li>
-                  <li>Diagramming</li>
-                  <li>Brainstorming</li>
-                  <li>Online whiteboard</li>
-                  <li>Team collaboration</li>
-              </ul>
-          </div>
-          <div class="column">
-              <h3>Explore</h3>
-              <ul>
-                  <li>Design</li>
-                  <li>Prototyping</li>
-                  <li>Development features</li>
-                  <li>Design systems</li>
-                  <li>Collaboration features</li>
-                  <li>Design process</li>
-                  <li>FigJam</li>
-              </ul>
-          </div>
-          <div class="column">
-              <h3>Resources</h3>
-              <ul>
-                  <li>Blog</li>
-                  <li>Best practices</li>
-                  <li>Colors</li>
-                  <li>Color wheel</li>
-                  <li>Support</li>
-                  <li>Developers</li>
-                  <li>Resource library</li>
-              </ul>
-          </div>
-      </div>
+    <ul class="contact-list">
+      {% for contact in site.data.contact %}
+        <li>
+          {% if contact.type == "email" %}
+            <a href="mailto:{{ contact.link }}" title="Copy Email Address" {% if contact.noblank %}target="_self"{% else %}target="_blank" rel="noopener"{% endif %}>
+              <i class="{{ contact.icon }}"></i> {{ contact.type | capitalize }}
+            </a>
+          {% else %}
+            <a href="{{ contact.link }}" {% if contact.noblank %}target="_self"{% else %}target="_blank" rel="noopener"{% endif %}>
+              <i class="{{ contact.icon }}"></i> {{ contact.type | capitalize }}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="small-text">Custom theme for Jekyll</p>
   </div>
 </footer>
