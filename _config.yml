@@ -21,7 +21,6 @@
 title: 쑥log
 lang: ko
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 markdown: kramdown
