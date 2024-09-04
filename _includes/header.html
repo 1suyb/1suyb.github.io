@@ -5,7 +5,9 @@
 <header>
   <header class="header">
     <div class="container">
-      <h1 class="title">{{site.title}}</h1>
+      <li class="title">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </li>
       <nav class="navbar">
         <ul>
             <li><a href="{{ '/' | relative_url }}">Home</a></li>
