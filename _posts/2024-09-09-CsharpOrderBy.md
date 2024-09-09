@@ -2,7 +2,7 @@
 layout: post
 title:  "[C#] OrderBy"
 date:   2024-09-09 13:00:00 +0900
-categories: C#
+categories: Csharp
 ---
 
 # Orderby 함수란?

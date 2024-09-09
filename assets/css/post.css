@@ -1,4 +1,15 @@
+.post_container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

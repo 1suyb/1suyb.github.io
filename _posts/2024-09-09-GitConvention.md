@@ -2,7 +2,7 @@
 layout: post
 title:  "[git] GitConvention"
 date:   2024-09-09 17:00:00 +0900
-categories: git
+categories: Git
 ---
 
 ## git commit Convention이 왜 필요한가?
