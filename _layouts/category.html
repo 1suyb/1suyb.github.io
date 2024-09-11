@@ -1,0 +1,15 @@
+---
+layout: default
+title: Category
+permalink: /tabs/category/
+---
+
+<h1>Categories</h1>
+
+<ul>
+  {% for category in site.categories %}
+    <li>
+      <a href="{{ site.baseurl }}/categories/{{ category[0] | downcase }}">{{ category[0] }}</a> ({{ category[1].size }})
+    </li>
+  {% endfor %}
+</ul>
