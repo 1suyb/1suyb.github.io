@@ -9,7 +9,23 @@ permalink: /tabs/category/
 <ul>
   {% for category in site.categories %}
     <li>
-      <a href="{{ site.baseurl }}/categories/{{ category[0] | downcase }}">{{ category[0] }}</a> ({{ category[1].size }})
+      <h2>
+        <a href="{{ site.baseurl }}/categories/{{ category[0] | downcase }}">{{ category[0] }}</a> ({{ category[1].size }})
+      </h2>
+      <ul>
+        {% assign post_count = 0 %}
+        {% for post in site.posts%}
+          {% if post.categories contains category[0] %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+            {% assign post_count = post_count | plus: 1 %}
+            {% if post_count == 10 %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
     </li>
   {% endfor %}
 </ul>
