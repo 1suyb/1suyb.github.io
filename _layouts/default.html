@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-  {% include lang.html %}
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    {% include header.html %}
-    {{content}}
-    {% include footer.html %}
-      
-  </body>
+<html lang="{{site.lang}}">
 
-  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    MathJax = {
-      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    };
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.title}}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+
+<body>
+    <header class="header-body">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="{{'/' | relative_url}}"> {{site.title}} </a>
+            </div>
+            <nav class="page-navbar">
+                <ul>
+                    <li><a href="{{'/tabs/Posts'|relative_url}}"></a>Posts</li>
+                    <li><a href="{{'/tabs/Category'|relative_url}}"></a>Category</li>
+                    <li><a href="{{'/tabs/Archieves'|relative_url}}"></a>Archieves</li>
+                    <li><a href="{{'/tabs/About'|relative_url}}"></a>About</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+
+
 </html>
-
-  
-  

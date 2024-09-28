@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   
     spec.files         = Dir["**/*"]
   
-    spec.add_dependency "jekyll", "~> 4.0"
+    spec.add_dependency "jekyll", "~> 3.10.0"
   
     spec.metadata["jekyll-theme"] = "my-theme"
   end
