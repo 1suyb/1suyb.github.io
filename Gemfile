@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # Jekyll 버전 지정
 gem "jekyll", "~> 4.3.4"
-gem "github-pages", :platforms => [:x86_64-linux]  # Linux 플랫폼 지정
+gem "github-pages", :platforms => [:x86_64_linux]  # Linux 플랫폼 지정
 
 # Windows 및 JRuby용 특정 플랫폼 설정
 platforms :mingw, :x64_mingw, :mswin, :jruby do
