@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<main>
+    <div class="project">
+        <h1>Projects</h1>
+        <div class="project-cards">
+            {% assign project_posts = site.posts | where: "categories", "project" | limit: 4 %}
+            {% for post in project_posts %}
+            <div class="project-card" >
+                <a href="{{ post.url | relative_url }}">
+                    <img src="{{post.thumbnail}}" alt="thumbnail" class="project-card-img" >
+                </a>
+                <p class="project-title">{{ post.title }}</p>
+                <p class="project-description">{{ post.description }}</p>
+                <a href="{{ post.url | relative_url }}">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="posts-lastest">
+        <h1>Lastest posts</h1>
+        <ul class="posts-lastest-list">
+            {% for post in site.posts limit:10 %}
+            <li>
+                <a href="{{ post.url | relative_url }}">
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.date|date:"%B %d, %Y" }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+</main>

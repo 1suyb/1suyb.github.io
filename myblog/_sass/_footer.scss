@@ -1,0 +1,31 @@
+@import "variables";
+
+.footer-body {
+    background-color: $background2;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* 중간 텍스트 정렬 */
+    .footer-content {
+        max-width: 1000px; /* 최대 너비를 넓혀서 공간 확보 */
+        margin: 0 auto;
+        display: flex; /* Flexbox 레이아웃 적용 */
+        justify-content: space-between; /* 양쪽 끝에 배치 */
+        align-items: center; /* 세로 가운데 정렬 */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            li {
+                margin: 0;
+            }
+            a {
+                color: $text-color;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+        }
+    }
+    
+}

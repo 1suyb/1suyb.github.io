@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<main>
+    <div class="posts-container">
+        <div class="posts-header">
+            <h1>ALL Posts</h1>
+            <hr>
+        </div>
+        <div class="posts-list">
+            <ul>
+                {% for post in site.posts %}
+                <li>
+                    <a href="{{post.url|relative_url}}">
+                        <h2>{{post.title}}</h2>
+                        <p>{{post.date|date:"%B %d, %Y" }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+           
+        </div>
+    </div>
+</main>

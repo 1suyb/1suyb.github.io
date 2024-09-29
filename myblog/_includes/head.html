@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.title}}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-c.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // 모든 <pre><code> 요소를 순회
+        document.querySelectorAll('pre code').forEach(function(block) {
+          // code의 class에서 'language-' 부분을 찾고, 그 뒤의 언어명을 추출
+          var match = block.className.match(/language-(\w+)/);
+          if (match) {
+            // <pre> 태그에 data-language 속성 추가
+            block.parentNode.setAttribute('data-language', match[1].toUpperCase());
+          }
+        });
+      });
+    </script>
+  </head>

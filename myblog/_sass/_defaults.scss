@@ -1,0 +1,12 @@
+@import "variables";
+
+
+body{
+    background-color: $background1; 
+}
+main{
+    padding-top: 74px;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-family: $Noto-Sans;
+}
