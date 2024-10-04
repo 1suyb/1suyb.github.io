@@ -2,7 +2,7 @@
 layout: post
 title:  "[DesignPattern] 상태 패턴"
 date:   2024-09-30 20:00:00 +0900
-categories: CS
+categories: DesignPattern
 description: 디자인패턴 - 상태패턴
 tag: 내일배움캠프
 thumbnail:

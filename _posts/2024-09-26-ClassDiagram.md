@@ -2,7 +2,7 @@
 layout: post
 title:  "UML_ClassDiagram TIL_20240926"
 date:   2024-09-26 20:00:00 +0900
-categories: til
+categories: CS
 description: 2024년 09월 26일 Today I Learned
 tag: 내일배움캠프
 thumbnail: /assets/images/TIL/TIL.jpg
