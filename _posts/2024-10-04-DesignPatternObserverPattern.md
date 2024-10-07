@@ -17,7 +17,7 @@ thumbnail:
 - Subject : 상태를 관리하고, 옵저버들을 등록하거나 삭제할 수 있는 객체. 상태가 변하면 모든 옵저버들에게 변경사항을 통지
 - Observer : 주제의 상태를 관찰하는 객체. 
 
-```C#
+```CSharp
 public class Player{
     private List<IObserver> observers = new List<IObserver>();
     private int health;
@@ -56,6 +56,7 @@ public class HealthUI : IObserver{
 - subject와 observer가 서로 독립적으로 존재할 수 있어 느슨한 결합을 유지할 수 있음.
 - 확장성 새로운 옵저버를 쉽게 추가할 수 있음 (OCP)
 - 주제의 상태가 변경ㅎ될 때 모든 옵저버가 자동으로 업데이트 되어 수동 객체간의 상태를 동기화하는 작업을 줄일 수 있음. 이벤트 기반 시스템에서 효율적인 이벤트 처리가 가능함
+
 ### 단점
 - 디버깅이 어려움
 - 옵저버가 너무 많을 경우 시간이 오래걸릴 수 있음.
